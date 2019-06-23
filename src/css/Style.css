@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 1.4;
+}
+
+body {
+  font-size: calc(10px + 2vmin);
+  background-color: #282c34;
+  color: white;
+  padding: 5px;
+}
+
+nav a {
+  color: #61dafb;
+  text-decoration: none;
+  text-align: left;
+  margin-right: 10px;
+}
+nav .active {
+  text-decoration: underline;
+}
+
+.search .searchInput {
+  display: block;
+  border: solid 2px lightgrey;
+  border-radius: 5px;
+  background-color: white;
+  margin: 10px auto;
+  height: 28px;
+  width: 80%;
+}
+.search .searchButton {
+  margin: 10px auto;
+  width: 80px;
+  height: 30px;
+  border: solid 3px #4caf50;
+  color: #4caf50;
+  background-color: #282c34;
+}
+
+.container {
+  min-height: 130vh;
+}
+
+li {
+  list-style: none;
+}
+
+.results li {
+  border: solid 1px #3e4451;
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px #3e4451;
+  background: #3e4451;
+  border-raidus: 5px;
+  padding: 15px;
+  list-style: none;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 18px;
+}
+.results .artist {
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.results .track-name {
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=Style.css.map */

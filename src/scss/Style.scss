@@ -1,0 +1,70 @@
+@import "./partials/variables", "./partials/mixins", "./partials/resets";
+
+body {
+  font-size: $font-size;
+  background-color: $color-primary;
+  color: white;
+  padding: 5px;
+}
+
+nav {
+  a {
+    color: $color-secondary;
+    text-decoration: none;
+    text-align: left;
+    margin-right: 10px;
+  }
+  .active {
+    text-decoration: underline;
+  }
+}
+
+.search {
+  .searchInput {
+    display: block;
+    border: solid 2px lightgrey;
+    border-radius: 5px;
+    background-color: white;
+    margin: 10px auto;
+    height: 28px;
+    width: 80%;
+  }
+
+  .searchButton {
+    margin: 10px auto;
+    width: 80px;
+    height: 30px;
+    border: solid 3px $button-color-green;
+    color: $button-color-green;
+    background-color: $color-primary;
+  }
+}
+
+.container {
+  min-height: 130vh;
+}
+li {
+  list-style: none;
+}
+
+.results {
+  li {
+    border: solid 1px $results-color;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px $results-color;
+    background: $results-color;
+    border-raidus: 5px;
+    padding: 15px;
+    list-style: none;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+  .artist {
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .track-name {
+    margin: 0 auto;
+  }
+}
