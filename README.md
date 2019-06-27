@@ -1,68 +1,93 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- HEADINGS 1 - 6 use a # symbol  -->
 
-## Available Scripts
+# Lyrics4Me
 
-In the project directory, you can run:
+## **Abstract:**
 
-### `npm start`
+ <!-- Italics use a SINGLE ASTERIK * symbol  -->
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_We've built an app in React that enables the user to search for song lyrics of any desired artists._
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+<!-- STRONG TAGS USE DOUBLE ASTERIK **  -->
 
-### `npm test`
+## **Installation Instructions:**
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Open Your Terminal
 
-### `npm run build`
+### Copy and paste the following lines below into your terminal:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/GregGains/lyrics4me.git
+```
+```bash
+cd lyrics4me/
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```bash
+npm install
+```
+```bash
+npm start
+```
+## **Project Background:**
+ This project will help us learn how to build React apps and make an api calls to obtain data and then utilize that data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **Project Goals:**
+ * Write a program from scratch
+ * Design and implement our app in React using states and props
+ * Write modular, reusable code that follows SRP (Single Responsibility Principle)
 
-### `npm run eject`
+<!-- STRIKE THROUGH USE DOUBLE TILDE SYMBOL ~~   -->
+<!-- ~~W.I.P~~ -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- HORIZONTAL RULE TRIPLE HYPHENS --- USE TO SEPARATE CONTENT AREAS  -->
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ <!-- --- -->
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<!-- TO SHOW SYMBOLS LIKE # AND * U MUST FIRST USE A BACKSLASH -->
+<!-- \*Testing\* -->
 
-## Learn More
+<!-- Block Quote  USE THE GREATER THAN SYMBOL > -->
+<!-- > This is a block quote -->
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- LINKS MUST GO IN BRACKETS [Traversy Media](URL GOES HERE) -->
+<!-- [Greg's Github Link](https://www.github.com/greggains) -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- UNORDERED LISTS USE 1 ASTERIK *  -->
+<!-- * step 1
+    * nested item 1
 
-### Code Splitting
+* step 2
+    * nested item 2
+* step 3
+    * nested item 3 -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<!-- ORDERED LIST CAN JUST USE NUMBER 1. multiple times   -->
+<!-- 1. step 1
+2. step 2
+3. step 2
+    OR
+1. step 1
+1. step 2
+1. step 3 -->
 
-### Analyzing the Bundle Size
+<!-- INLINE CODE BLOCK ARE BACK TICKS ` `  -->
+<!-- `<p> Inline block element </P>` -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+<!--  Images JUST LIKE A LINK BUT USE AN EXCLAMATION POINT FIRST ! -->
+<!-- ![Logo](https://markdown-here.com/img/icon256.png) -->
 
-### Making a Progressive Web App
+<!-- ---
+ > # Github Markdown -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<!-- Code Blcoks use three backticks ```  ALSO you can specify the coding language by typing it after the backticks ex:  ```javascript  -->
 
-### Advanced Configuration
+<!-- ```
+npm install
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+npm start
+``` -->

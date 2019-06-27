@@ -33,15 +33,21 @@ class App extends React.Component {
 
 
   search = (artist, track) => {
-    let url = `/matcher.lyrics.get?format=json&callback=callback&q_track=${track}&q_artist=${artist}&apikey=953dfdaed2e936de26382bafb309463e`;
+    if( artist !== '' && track !== '') {
+      let url = `/matcher.lyrics.get?format=json&callback=callback&q_track=${track}&q_artist=${artist}&apikey=953dfdaed2e936de26382bafb309463e`;
     
-    fetch(url)
-    .then(response => response.json())
-    .then(response => this.setState({results: response.message.body.lyrics}))
-    .catch(error => console.log(`Sorry, there has been an error \n ${error}`));
+      fetch(url)
+      .then(response => response.json())
+      .then(response => this.setState({results: response.message.body.lyrics}))
+      .catch(error => console.log(`Sorry, there has been an error \n ${error}`));
+  
+      this.displaySearch(artist, track);
+    } else {
+      alert("You must enter both fields!")
+    }
 
-    this.displaySearch(artist, track);
-  }
+    }
+  
 
   // =========================
   // LIFE CYCLE METHODS
