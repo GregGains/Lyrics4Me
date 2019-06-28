@@ -1,15 +1,16 @@
 import React from "react";
 
-export default function Results(props) {
+export default function Results({ song, artist, album, rating }) {
   return (
-    <div className={props.artist ? "results" : ""}>
-      <ul className="results-list">
-        <li>
-          <h2 className="artist"> { props.artist } </h2> <br />
-          <h3 className="track-name"> { props.track }  </h3> <br />
-          <p  className="lyrics">  {props.title}    </p> <br />
-        </li>
-      </ul>
-    </div>
+    <React.Fragment>
+      <li className="searched-song">
+       
+         { song ? <h4 className="searched-song"> {song} <br /></h4> : "" }
+         { artist ? <h3 className="searched-artist"> {artist} <br /></h3> : "" }
+         { album ? <h4 className="searched-lyrics"> {album} <br /></h4> : ""} 
+         { rating ? <h4 className="searched-rating">{rating}<br /></h4> : "" } 
+      
+      </li>
+    </React.Fragment>
   );
 }

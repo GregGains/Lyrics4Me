@@ -5,31 +5,19 @@ export default class Search extends Component {
   // STATE
   // ====================
   state = {
-    artist: "",
-    track: ""
-    
-  };
+    value: ""
+  }
 
-  handleArtistState = e => {
-    this.setState({
-      artist: e.target.value,
-      
-    })
-  };
-
-  handleTrackState = e => {
-    this.setState({
-      track: e.target.value,
-      
-    });
-  };
+  handleState = e => {
+    this.setState({value: e.target.value})
+  }
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.search(this.state.artist, this.state.track);
-    this.setState({ artist: "" });
-    this.setState({ track: "" })
-  };
+    this.props.formSearch(this.state.value);
+    this.setState({value: ""});
+  }
+
 
   render() {
     return (
@@ -37,35 +25,22 @@ export default class Search extends Component {
         <form method="GET" onSubmit={this.handleSubmit}>
           <input
             className="searchInput"
-            onChange={this.handleArtistState}
-            //add Onclick for state
-            type="text"
-            value={this.state.artist}
-            placeholder="Artist Name"
-          />
-
-
-          <input
-            className="searchInput"
-            onChange={this.handleTrackState}
-            //add Onclick for state
-            type="text"
-            value={this.state.track}
+            onChange={this.handleState}
+            value={this.state.value}
             placeholder="Song Name"
-            
           />
-
-          
-       
-
           <input className="searchButton" type="submit" value="Search" />
         </form>
 
-        <Results title={this.props.results.lyrics_body} 
-                 search={this.props.search}
-                 artist={this.props.artist}
-                 track={this.props.track}
-                 />
+        <ul className="results">
+          {this.props.results.map(song => <Results 
+                                            key={song.track.track_id}
+                                            song={song.track.track_name}
+                                            artist={song.track.artist_name}
+                                            album={song.track.album_name}
+                                            rating={song.track.track_rating}  
+                                           /> )}
+        </ul>
       </div>
     );
   }

@@ -5,7 +5,12 @@ export default function Header() {
     <div className="Header">
       <header>
         <nav>
-          <NavLink exact to="/">Home</NavLink>
+          <NavLink exact to="/">
+            Home
+          </NavLink>
+          <NavLink exact to="/Search">
+            Search
+          </NavLink>
           <NavLink to="/About">About</NavLink>
         </nav>
       </header>
