@@ -9,7 +9,7 @@ export default function Results({ song, artist, album, rating, track_id, album_i
          { song ? <span className="searched-song"> {song} <br /></span> : "" }
          { artist ? <span className="searched-artist"> {artist} <br /></span> : "" }
          { album ? <span className="searched-lyrics"> {album} <br /></span> : ""} 
-         { rating ? <span className="searched-rating">{rating}<br /></span> : "" } 
+         { rating ? <span className="searched-rating">rating: {rating}<br /></span> : "" } 
          </NavLink>
       </li>
     </React.Fragment>

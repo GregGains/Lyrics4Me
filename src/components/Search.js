@@ -32,7 +32,7 @@ export default class Search extends Component {
           <input className="searchButton" type="submit" value="Search" />
         </form>
 
-        <ul className="results">
+        <ul className={this.props.results ? "results" : ""}>
           {this.props.results.map(song => <Results 
                                             key={song.track.track_id}
                                             song={song.track.track_name}
