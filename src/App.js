@@ -20,6 +20,7 @@ class App extends React.Component {
     topSongs: [],
     searchedSongs: [],
     lyrics: [],
+    albumInfo: [],
     isLoading: false
   };
   // =========================
@@ -43,11 +44,33 @@ class App extends React.Component {
   // =======================
   formSearch = data => {
     this.setState({isLoading: true})
-    fetch(`/track.search?q_track_artist=${data}&page=1&page_size=10&s_artist_rating=desc&apikey=${process.env.REACT_APP_API_KEY}`)
+    fetch(`/track.search?q_track_artist=${data}&page=1&page_size=15&s_artist_rating=desc&apikey=${process.env.REACT_APP_API_KEY}`)
       .then(res => res.json())
       .then(res => this.setState({searchedSongs: res.message.body.track_list,isLoading: false}))
       .catch(error => console.log(`Sorry there's been an error: \n${error}`));
     }
+
+    getLyrics = trackId => {
+      this.setState({isLoading: true});
+      fetch(`/track.lyrics.get?track_id=${trackId}&apikey=${process.env.REACT_APP_API_KEY}`)
+      .then(res => res.json())
+      .then(res => this.setState({lyrics: res.message.body.lyrics}))
+      .catch(error => console.log(`Error: ${error}`));
+    }
+
+    getAlbum = albumId => {
+      this.setState({isLoading: true});
+      fetch(`/album.get?album_id=${albumId}&apikey=${process.env.REACT_APP_API_KEY}`)
+      .then(res => res.json())
+      .then(res => this.setState({albumInfo: res.message.body.album}))
+      .catch(error => console.log(`Error: ${error}`));
+    }
+
+
+
+  clearState = () => {
+  this.setState({searchedSongs: [], albumInfo: [], lyrics: []})
+  }
   // =====================
   // RENDER METHOD
   // =====================
@@ -57,7 +80,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div className="App">
           <div className="container">
-            <Header />
+            <Header clearState={this.clearState} />
             <Route
               exact
               path="/"
@@ -72,7 +95,17 @@ class App extends React.Component {
                                     results={this.state.searchedSongs}
                                     />}
             />
-            <Route exact path="/Search/Artist/Lyrics" render={ () => <Lyrics />} />
+            <Route exact path="/:artist/:song/:album/:track"
+                         render={ props => <Lyrics 
+                                            {...props}
+                                            getAlbum={this.getAlbum}
+                                            getLyrics={this.getLyrics}
+                                            clearState={this.clearState}
+                                            lyrics={this.state.lyrics}
+                                            albumInfo={this.state.albumInfo}
+                                              />}
+
+              />
             <Route exact path="/About" component={About} />
           </div>
           <Footer />

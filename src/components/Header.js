@@ -1,17 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-export default function Header() {
+export default function Header({ clearState }) {
   return (
     <div className="Header">
       <header>
         <nav>
-          <NavLink exact to="/">
+          <NavLink exact to="/" onClick={() => clearState()}>
             Home
           </NavLink>
-          <NavLink exact to="/Search">
+          <NavLink exact to="/Search" onClick={() => clearState()}>
             Search
           </NavLink>
-          <NavLink to="/About">About</NavLink>
+          <NavLink to="/About" onClick={() => clearState()}>
+            About
+          </NavLink>
         </nav>
       </header>
     </div>

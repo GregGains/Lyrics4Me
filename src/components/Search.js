@@ -38,7 +38,9 @@ export default class Search extends Component {
                                             song={song.track.track_name}
                                             artist={song.track.artist_name}
                                             album={song.track.album_name}
-                                            rating={song.track.track_rating}  
+                                            rating={song.track.track_rating}
+                                            track_id={song.track.track_id}
+                                            album_id={song.track.album_id}  
                                            /> )}
         </ul>
       </div>
