@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function Header({ clearState }) {
   return (
     <div className="Header">
-      <header>
+    
         <nav>
           <NavLink exact to="/" onClick={() => clearState()}>
             Home
@@ -15,7 +15,7 @@ export default function Header({ clearState }) {
             About
           </NavLink>
         </nav>
-      </header>
+      
     </div>
   );
 }

@@ -5,12 +5,12 @@ export default function Results({ song, artist, album, rating, track_id, album_i
   return (
     <React.Fragment>
       <li className="searched-song">
-       
-         { song ? <h4 className="searched-song"> {song} <br /></h4> : "" }
-         { artist ? <h3 className="searched-artist"> {artist} <br /></h3> : "" }
-         { album ? <h4 className="searched-lyrics"> {album} <br /></h4> : ""} 
-         { rating ? <h4 className="searched-rating">{rating}<br /></h4> : "" } 
-         <NavLink className="lyrics" to={`/${artist}/${song}/${album_id}/${track_id}`} >Lyrics</NavLink>
+      <NavLink className="lyrics" to={`/${artist}/${song}/${album_id}/${track_id}`} >
+         { song ? <span className="searched-song"> {song} <br /></span> : "" }
+         { artist ? <span className="searched-artist"> {artist} <br /></span> : "" }
+         { album ? <span className="searched-lyrics"> {album} <br /></span> : ""} 
+         { rating ? <span className="searched-rating">{rating}<br /></span> : "" } 
+         </NavLink>
       </li>
     </React.Fragment>
   );

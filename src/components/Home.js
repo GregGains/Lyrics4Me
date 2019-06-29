@@ -4,9 +4,16 @@ import Search from "./Search";
 export default function Home({ topSongs, search, results, artist, track }) {
   return (
     <div className="Home">
-      <h1>Lyrics 4 Me</h1>
+      <header className="">
+        <h1>Lyrics 4 Me</h1>
+        <img src="" alt="" title="" />
+        <p />
+      </header>
+
+      <h2>Trending</h2>
 
       <h3>Top Charting Songs </h3>
+
       <ul className="topList">
         {topSongs.map(song => (
           <Topsongs
